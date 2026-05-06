@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/tech-notes/',
   title: "Felix's Digital Garden",
   description: "Personal tech notes on everything I'm interested in.",
   themeConfig: {
