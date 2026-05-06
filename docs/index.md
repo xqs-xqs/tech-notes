@@ -1,25 +1,23 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
   name: "Felix's Digital Garden"
   text: "Personal tech notes on everything I'm interested in."
-  tagline: My great project tagline
+  tagline: 帅小帅的数字花园
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 开始阅读
       link: /markdown-examples
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 在 GitHub 查看
+      link: https://github.com/xqs-xqs/tech-notes
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 📚 学习笔记
+    details: 记录学习过程中的思考与总结
+  - title: 💡 技术分享
+    details: 分享开发中遇到的问题与解决方案
+  - title: 🌱 持续成长
+    details: 像花园一样，慢慢生长，慢慢丰富
 ---
-
