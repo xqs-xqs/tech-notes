@@ -1,3 +1,10 @@
+---
+title: 从零搭建 VitePress 技术博客 · 完整部署教程
+description: ...
+date: 2026-05-06
+tags: [VitePress, GitHub Pages, GitHub Actions, 教程]
+---
+
 # 从零搭建 VitePress 技术博客踩坑全记录
 
 > 一次完整的"GitHub 仓库 + GitHub Pages + VitePress"部署实战，记录我在这个过程中踩过的所有坑、绕过的所有弯路，以及最后悟到的经验。
@@ -228,6 +235,7 @@ jobs:
 ### 现象
 
 终于看到网站了，**但是页面像 1995 年的网页**——纯文字、无样式、布局错乱。
+
 
 <img width="1512" height="790" alt="image" src="https://github.com/user-attachments/assets/0d32db5c-0f6f-4d7f-a543-67c965cdb14a" />
 
