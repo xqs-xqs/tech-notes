@@ -1,6 +1,6 @@
 ---
 title: 从零搭建 VitePress 技术博客 · 完整部署教程
-description: ...
+description: 记录 VitePress、GitHub Pages、GitHub Actions 部署过程中的常见问题和解决方案
 date: 2026-05-06
 tags: [VitePress, GitHub Pages, GitHub Actions, 教程]
 ---
