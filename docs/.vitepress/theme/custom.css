@@ -1,0 +1,74 @@
+:root {
+  --vp-font-family-base:
+    Inter, "Noto Sans SC", "PingFang SC", "Microsoft YaHei",
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+
+/* 一级分组标题加粗 */
+.VPSidebarItem.level-0 > .item > .text {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* 二级链接稍微缩进、弱化 */
+.VPSidebarItem.level-1 .text {
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* 专注阅读按钮 */
+.focus-toggle {
+  position: fixed;
+  left: 18px;
+  bottom: 24px;
+  z-index: 100;
+  padding: 8px 12px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 999px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.focus-toggle:hover {
+  color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+
+/* 只在桌面端启用，移动端保留 VitePress 默认菜单逻辑 */
+@media (min-width: 960px) {
+  html.vp-sidebar-collapsed .VPSidebar {
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease;
+  }
+
+  html.vp-sidebar-collapsed .VPContent.has-sidebar {
+    padding-left: 0 !important;
+  }
+
+  html.vp-sidebar-collapsed .VPNavBar.has-sidebar .title {
+    border-bottom: 1px solid var(--vp-c-divider);
+  }
+
+  html.vp-sidebar-collapsed .VPNavBar.has-sidebar .content {
+    padding-left: 0 !important;
+  }
+
+  html.vp-sidebar-collapsed .VPDoc.has-aside .content-container {
+    max-width: 860px;
+  }
+}
