@@ -1,3 +1,11 @@
-node_modules
-docs/.vitepress/dist
-docs/.vitepress/cache
+# dependencies
+node_modules/
+
+# VitePress build output
+docs/.vitepress/dist/
+
+# VitePress cache
+docs/.vitepress/cache/
+
+# accidentally generated root VitePress cache/config directory
+/.vitepress/
