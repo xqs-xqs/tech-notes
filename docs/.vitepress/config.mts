@@ -11,6 +11,12 @@ const vitePressConfig = defineConfig({
   // 是否使用 Git 获取每个页面的最后更新时间戳
   lastUpdated: true,
 
+  // 网站图标
+  // type 告诉浏览器：这个 favicon 文件的 MIME 类型 是 SVG 图片
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }]
+  ],
+
   themeConfig: {
     // 顶部导航 = 知识库切换器
     nav: [
