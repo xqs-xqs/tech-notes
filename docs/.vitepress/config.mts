@@ -14,7 +14,7 @@ const vitePressConfig = defineConfig({
   // 网站图标
   // type 告诉浏览器：这个 favicon 文件的 MIME 类型 是 SVG 图片
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }]
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/tech-notes/favicon.svg' }]
   ],
 
   themeConfig: {
