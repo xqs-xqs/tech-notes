@@ -50,8 +50,8 @@ const vitePressConfig = defineConfig({
               link: '/engineering/vitepress/vitepress-deployment-pitfalls'
             },
             {
-              text: 'VitePress 部署全流程',
-              link: '/engineering/vitepress/site-config'
+              text: '搭建 VitePress 博客完整指南',
+              link: '/engineering/vitepress/vitepress-full-guide'
             }
           ]
         },
