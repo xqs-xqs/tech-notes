@@ -18,12 +18,18 @@ const vitePressConfig = defineConfig({
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/tech-notes/favicon.svg' }]
   ],
 
+  // 开启 markdown 文件中数学公式的渲染
+  markdown: {
+    math: true
+  },
+
   themeConfig: {
     // 顶部导航 = 知识库切换器
     nav: [
       { text: '首页', link: '/' },
       { text: '工程实践', link: '/engineering/', activeMatch: '/engineering/' },
       { text: '思考与随笔', link: '/thoughts/', activeMatch: '/thoughts/' },
+      { text: '知识探索', link: '/exploration/', activeMatch: '/exploration/' },
       // 后续新增分类，按下面格式加一行就行：
       // { text: 'Agent', link: '/agent/', activeMatch: '/agent/' },
       // { text: 'Python', link: '/python/', activeMatch: '/python/' },
@@ -65,10 +71,36 @@ const vitePressConfig = defineConfig({
             // { text: 'VS Code 写作环境配置', link: '/engineering/appendix/vscode-writing' }
           ]
         }
-      ]   
+      ],
+      
+      '/exploration/': [
+        {
+          text: '网络与安全',
+          collapsed: false,
+          items: [
+            {
+              text: '无线网络中的对抗性防御综述',
+              link: '/exploration/network-and-security/adversarial-defenses-in-wireless-networks'
+            }
+          ]
+        },
+        {
+          text: '读书笔记',
+          collapsed: true,
+          items: [
+            { text: '主题总览', link: '/exploration/reading-notes/' }
+          ]
+        },
+        {
+          text: '跨领域探索',
+          collapsed: true,
+          items: [
+            { text: '主题总览', link: '/exploration/cross-domain/' }
+          ]
+        }
+      ]
     },
 
-    
 
     // 社交媒体链接
     socialLinks: [

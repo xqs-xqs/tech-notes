@@ -23,11 +23,11 @@ features:
     link: /engineering/
     linkText: 进入工程实践
 
-  - icon: 🧠
-    title: 算法与 Java
-    details: 整理 LeetCode、数据结构、边界条件和 Java 解法模板。
-    link: /algorithms/
-    linkText: 查看算法笔记
+  # - icon: 🧠
+  #   title: 算法与 Java
+  #   details: 整理 LeetCode、数据结构、边界条件和 Java 解法模板。
+  #   link: /algorithms/
+  #   linkText: 查看算法笔记
 
   - icon: 🤖
     title: AI 学习笔记
@@ -40,6 +40,12 @@ features:
     details: 记录学习方法、技术成长、项目复盘和一些长期思考。
     link: /thoughts/
     linkText: 查看随笔
+
+  - icon: 🔭
+    title: 知识探索
+    details: 记录跨领域学习，以及对个人知识边界的探索。
+    link: /exploration/
+    linkText: 进入知识探索
 ---
 
 <!-- HTML 注释不能嵌套 -->
