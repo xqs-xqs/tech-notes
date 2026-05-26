@@ -11,7 +11,7 @@ const recommended = [
   {
     title: 'ANN 近似最近邻搜索入门',
     description: '从精确检索的瓶颈讲起，梳理 ANN 的核心思想、主流算法（HNSW、IVF、PQ）和工程取舍。它是向量检索的引擎，也是 RAG 系统能跑起来的前提。',
-    href: '/ai/rag/ann-approximate-nearest-neighbor',
+    href: '/ai/rag/ann-guide-for-vector-retrieval',
     tag: 'RAG',
     date: '2026-05',
     reason: '这是这个知识库的第一篇文章，也是 RAG 系统的地基：理解了 ANN，才能理解为什么向量数据库长这样、为什么检索质量和速度需要权衡。'
