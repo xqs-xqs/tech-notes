@@ -9,3 +9,7 @@ docs/.vitepress/cache/
 
 # accidentally generated root VitePress cache/config directory
 /.vitepress/
+
+# Claude Code local memory and settings
+.claude/
+
