@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 // import { withSidebar } from 'vitepress-sidebar'
 
 const vitePressConfig = defineConfig({
@@ -81,7 +82,7 @@ const vitePressConfig = defineConfig({
           items: [
             {
               text: 'ANN 近似最近邻搜索入门',
-              link: '/ai/rag/ann-approximate-nearest-neighbor'
+              link: '/ai/rag/ann-guide-for-vector-retrieval'
             }
           ]
         },
@@ -217,4 +218,4 @@ const vitePressConfig = defineConfig({
 
 // VitePress 配置文件必须最终导出
 // export default withSidebar(vitePressConfig, sidebarConfigs)
-export default vitePressConfig
+export default withMermaid(vitePressConfig)
