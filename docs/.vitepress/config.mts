@@ -28,6 +28,7 @@ const vitePressConfig = defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '工程实践', link: '/engineering/', activeMatch: '/engineering/' },
+      { text: 'AI 应用与学习', link: '/ai/', activeMatch: '/ai/' },
       { text: '思考与随笔', link: '/thoughts/', activeMatch: '/thoughts/' },
       { text: '知识探索', link: '/exploration/', activeMatch: '/exploration/' },
       // 后续新增分类，按下面格式加一行就行：
@@ -72,7 +73,27 @@ const vitePressConfig = defineConfig({
           ]
         }
       ],
-      
+
+      '/ai/': [
+        {
+          text: 'RAG 检索增强生成',
+          collapsed: false,
+          items: [
+            {
+              text: 'ANN 近似最近邻搜索入门',
+              link: '/ai/rag/ann-approximate-nearest-neighbor'
+            }
+          ]
+        },
+        {
+          text: 'Agent 设计与实现',
+          collapsed: true,
+          items: [
+            { text: '主题总览', link: '/ai/agent/' }
+          ]
+        }
+      ],
+
       '/exploration/': [
         {
           text: '网络与安全',

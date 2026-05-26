@@ -27,10 +27,10 @@ features:
   #   linkText: 查看算法笔记
 
   - icon: 🤖
-    title: AI 学习笔记
-    details: 记录大模型、Transformer、注意力机制、AI 工具链和论文理解。
+    title: AI 应用与学习
+    details: 记录 RAG、Agent 等应用实践，沉淀大模型、Transformer、注意力机制等原理学习。
     link: /ai/
-    linkText: 查看 AI 笔记
+    linkText: 进入 AI 知识库
 
   - icon: ✍️
     title: 思考与随笔
