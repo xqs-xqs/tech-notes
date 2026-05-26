@@ -1,12 +1,9 @@
 # 向量检索从入门到上手：ANN 算法的工业实战指南
-
+> - 🎯 读完你将拥有：
+> 
 > 面向有计算机基础、对 ANN 零认知的读者。读完你将理解四大算法家族的本质差异、亲手实现 LSH/IVF/HNSW 的核心逻辑、能在 Milvus / Qdrant / pgvector 上跑起来一个 RAG 检索服务，并掌握工业选型和调参经验。
 
-> **渲染兼容性提示**：本文包含 SVG（直接嵌入）和 Mermaid（代码块形式）两类图。
-> - **SVG**：所有主流 Markdown 渲染器（GitHub、Typora、Obsidian、Hugo、Hexo、VuePress、掘金、知乎）都直接渲染
-> - **Mermaid**：GitHub / GitLab / Typora / Obsidian / Notion / 掘金 / Hugo（需主题支持）/ VuePress（需插件）原生渲染；知乎、微信公众号、原生 Markdown 解析器**不支持**，会显示为代码块
-> - 如果你的目标平台不支持 Mermaid，把所有 `` ```mermaid `` 代码块用 [mermaid.live](https://mermaid.live) 在线转成 PNG/SVG 图片替换即可
-
+将自己在课堂上学到的知识以及做项目中遇到的相关知识进行提炼汇总，后续有新想法会继续更新。
 
 
 ## 引言：为什么 ANN 是 AI 基础设施的隐形支柱
