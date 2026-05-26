@@ -10,9 +10,6 @@ hero:
       text: 开始阅读
       link: /engineering/
     - theme: alt
-      text: 最新文章
-      link: /engineering/vitepress/vitepress-deployment-pitfalls
-    - theme: alt
       text: 在 GitHub 查看
       link: https://github.com/xqs-xqs/tech-notes
 
