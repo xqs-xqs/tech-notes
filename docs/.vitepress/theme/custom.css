@@ -4,16 +4,51 @@
     system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-
-/* 一级分组标题加粗 */
+/* ── Sidebar typography ── */
 .VPSidebarItem.level-0 > .item > .text {
   font-weight: 700;
-  font-size: 15px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-2);
 }
 
-/* 二级链接稍微缩进、弱化 */
 .VPSidebarItem.level-1 .text {
   font-size: 14px;
   line-height: 1.65;
 }
 
+/* ── Sidebar link hover ── */
+.VPSidebarItem.level-1 .link,
+.VPSidebarItem.level-2 .link {
+  border-radius: 6px;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.VPSidebarItem.level-1 .link:hover,
+.VPSidebarItem.level-2 .link:hover {
+  background-color: var(--vp-c-default-soft);
+}
+
+/* ── Active item ── */
+.VPSidebarItem.is-active > .item > .link {
+  background-color: var(--vp-c-brand-soft) !important;
+  border-radius: 6px;
+}
+
+.VPSidebarItem.is-active > .item > .link .text {
+  color: var(--vp-c-brand-1) !important;
+  font-weight: 500;
+}
+
+/* Active left indicator bar */
+.VPSidebarItem.is-active > .item > .indicator {
+  background-color: var(--vp-c-brand-1) !important;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ── Hero threads: ensure hero text stays above canvas ── */
+.VPHero {
+  position: relative;
+  z-index: 1;
+}
