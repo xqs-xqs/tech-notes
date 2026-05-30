@@ -52,3 +52,194 @@
   position: relative;
   z-index: 1;
 }
+
+/* ══════════════════════════════════════════════════════
+   Home page — Floating pill nav
+   Shape & layout shared across modes.
+   Visual (glass color) per mode.
+   ══════════════════════════════════════════════════════ */
+
+/* ── Pill shape & layout (both modes) ── */
+html:has(.VPHome) .VPNav {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: fit-content !important;
+  max-width: calc(100vw - 32px) !important;
+  top: 12px !important;
+  border-radius: 50px !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: none !important;
+}
+
+html:has(.VPHome) .VPNavBar {
+  border-radius: 50px !important;
+}
+
+html:has(.VPHome) .VPNavBar .divider {
+  display: none !important;
+}
+
+/* Constrain inner containers to pill width so social links stay inside */
+html:has(.VPHome) .VPNavBar .wrapper {
+  padding: 0 24px !important;
+}
+
+html:has(.VPHome) .VPNavBar .container {
+  max-width: 100% !important;
+}
+
+html:has(.VPHome) .VPNavBar .social-links {
+  margin-right: 0 !important;
+}
+
+/* Prevent inner content-body from drawing its own background when scrolled */
+html:has(.VPHome) .VPNavBar .content-body {
+  background: transparent !important;
+}
+
+/* ══════════════════════════════════════════════════════
+   Light mode home page — Grainient theme overrides
+   Nav/footer use :has(.VPHome) to avoid affecting
+   non-home pages.
+   ══════════════════════════════════════════════════════ */
+
+/* ── Light pill: frosted glass with white tint ── */
+html:not(.dark):has(.VPHome) .VPNavBar {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+html:not(.dark):has(.VPHome) .VPNavBar .VPNavBarMenuLink,
+html:not(.dark):has(.VPHome) .VPNavBar .VPNavBarTitle .title,
+html:not(.dark):has(.VPHome) .VPNavBar .VPSocialLink {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+html:not(.dark):has(.VPHome) .VPNavBar .VPNavBarMenuLink.active {
+  color: rgba(26, 26, 26, 0.92) !important;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.35), 0 2px 12px rgba(255, 255, 255, 0.18);
+  letter-spacing: 0.01em;
+}
+
+/* Search button */
+html:not(.dark):has(.VPHome) .VPNavBarSearch .DocSearch-Button {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+html:not(.dark):has(.VPHome) .VPNavBarSearch .DocSearch-Button .DocSearch-Button-Placeholder,
+html:not(.dark):has(.VPHome) .VPNavBarSearch .DocSearch-Button .DocSearch-Button-Keys {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ══════════════════════════════════════════════════════
+   Dark mode home page — pill nav glass
+   ══════════════════════════════════════════════════════ */
+
+html.dark:has(.VPHome) .VPNavBar {
+  background: rgba(20, 20, 25, 0.4) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Search button — dark glass */
+html.dark:has(.VPHome) .VPNavBarSearch .DocSearch-Button {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* ── Hero text: three-tier hierarchy (black / white / cream) ── */
+html:not(.dark) .VPHome {
+  --vp-home-hero-name-color: #1a1a1a;
+}
+
+html:not(.dark) .VPHero .name {
+  color: #1a1a1a !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.25), 0 4px 24px rgba(255, 255, 255, 0.15) !important;
+  letter-spacing: -0.02em;
+}
+
+html:not(.dark) .VPHero .text {
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 1px 12px rgba(76, 29, 149, 0.25);
+}
+
+html:not(.dark) .VPHero .tagline {
+  color: rgba(254, 249, 195, 0.85) !important;
+  text-shadow: 0 1px 8px rgba(76, 29, 149, 0.2);
+  font-weight: 400;
+}
+
+/* ── Hero action buttons ── */
+html:not(.dark) .VPHome .VPButton.medium.brand {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
+html:not(.dark) .VPHome .VPButton.medium.brand:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+html:not(.dark) .VPHome .VPButton.medium.alt {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+html:not(.dark) .VPHome .VPButton.medium.alt:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* ── Feature cards: frosted glass ── */
+html:not(.dark) .VPHome .VPFeature {
+  background: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+html:not(.dark) .VPHome .VPFeature .title {
+  color: #1a1a1a !important;
+}
+
+html:not(.dark) .VPHome .VPFeature .details {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+html:not(.dark) .VPHome .VPFeature .link-text {
+  color: #4c1d95 !important;
+}
+
+html:not(.dark) .VPHome .VPFeature a:hover .link-text {
+  color: #6d28d9 !important;
+}
+
+/* ── Footer: frosted glass ── */
+html:not(.dark):has(.VPHome) .VPFooter {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+html:not(.dark):has(.VPHome) .VPFooter .message,
+html:not(.dark):has(.VPHome) .VPFooter .copyright {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+html:not(.dark):has(.VPHome) .VPFooter .copyright a {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
