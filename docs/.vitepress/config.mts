@@ -152,7 +152,7 @@ const vitePressConfig = defineConfig({
     externalLinkIcon: true,
 
     footer: {
-      message: 'Released under the MIT License.',
+      message: 'Code under Apache 2.0 · Content under CC BY-NC-ND 4.0',
       copyright: 'Copyright © 2026 <a href="https://github.com/xqs-xqs">Felix</a>'
     },
 

@@ -148,6 +148,17 @@ tech-notes/
 
 ---
 
+## 📄 License
+
+本仓库采用双协议授权：
+
+- **代码部分**（VitePress 配置、自定义主题、构建脚本等）：[Apache License 2.0](LICENSE)
+- **文章内容**（`docs/` 目录下的 Markdown 文章及插图）：[CC BY-NC-ND 4.0](LICENSE-CONTENT) — 署名 / 非商业 / 禁止演绎
+
+
+
+---
+
 <p align="center">
   <em>🌱 慢慢来，比较快</em>
 </p>
