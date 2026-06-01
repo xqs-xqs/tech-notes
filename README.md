@@ -6,6 +6,9 @@
 
 > Personal tech notes on everything I'm interested in.
 
+
+[![GitHub Pages](https://img.shields.io/github/deployments/xqs-xqs/tech-notes/github-pages?label=deploy&logo=github)](https://xqs-xqs.github.io/tech-notes/) [![Apache 2.0](https://img.shields.io/badge/code-Apache%202.0-blue)](LICENSE) [![CC BY-NC-ND 4.0](https://img.shields.io/badge/content-CC%20BY--NC--ND%204.0-lightgrey)](docs/LICENSE-CONTENT) [![Built with VitePress](https://img.shields.io/badge/built%20with-VitePress-646CFF?logo=vite&logoColor=white)](https://vitepress.dev) [![Last Commit](https://img.shields.io/github/last-commit/xqs-xqs/tech-notes)](https://github.com/xqs-xqs/tech-notes/commits/main)
+
 这里是我的数字花园，一个用来沉淀学习成果、打磨技术理解、记录思考的地方。
 
 🌐 在线阅读：**[xqs-xqs.github.io/tech-notes](https://xqs-xqs.github.io/tech-notes/)**
