@@ -60,6 +60,10 @@ const vitePressConfig = defineConfig({
             {
               text: '搭建 VitePress 博客完整指南',
               link: '/engineering/vitepress/vitepress-full-guide'
+            },
+            {
+              text: 'VitePress 与语雀的区别及使用',
+              link: '/engineering/vitepress/vitepress-vs-yuque'
             }
           ]
         },
