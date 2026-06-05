@@ -30,6 +30,7 @@ const vitePressConfig = defineConfig({
       { text: '首页', link: '/' },
       { text: '工程实践', link: '/engineering/', activeMatch: '/engineering/' },
       { text: 'AI 应用与学习', link: '/ai/', activeMatch: '/ai/' },
+      { text: '计算机基础', link: '/cs/', activeMatch: '/cs/' },
       { text: '思考与随笔', link: '/thoughts/', activeMatch: '/thoughts/' },
       { text: '知识探索', link: '/exploration/', activeMatch: '/exploration/' },
       // 后续新增分类，按下面格式加一行就行：
@@ -40,6 +41,44 @@ const vitePressConfig = defineConfig({
 
     // 根据页面路径显示不同的侧边栏，同时多分组 sidebar
     sidebar: {
+      '/cs/': [
+        {
+          text: '数据结构',
+          collapsed: false,
+          items: [
+            { text: '主题总览', link: '/cs/data-structures/' }
+          ]
+        },
+        {
+          text: '算法',
+          collapsed: false,
+          items: [
+            { text: '主题总览', link: '/cs/algorithms/' }
+          ]
+        },
+        {
+          text: '操作系统',
+          collapsed: false,
+          items: [
+            { text: '主题总览', link: '/cs/os/' }
+          ]
+        },
+        {
+          text: '计算机网络',
+          collapsed: false,
+          items: [
+            { text: '主题总览', link: '/cs/networking/' }
+          ]
+        },
+        {
+          text: '计算机组成原理',
+          collapsed: false,
+          items: [
+            { text: '主题总览', link: '/cs/computer-organization/' }
+          ]
+        }
+      ],
+
       '/engineering/': [
         // {
         //   text: '新手入门',

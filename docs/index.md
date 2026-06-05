@@ -32,6 +32,12 @@ features:
     link: /ai/
     linkText: 进入 AI 知识库
 
+  - icon: 💻
+    title: 计算机基础
+    details: 系统整理数据结构、算法、操作系统、计算机网络等计算机科学基础知识。
+    link: /cs/
+    linkText: 进入计算机基础
+
   - icon: ✍️
     title: 思考与随笔
     details: 记录学习方法、技术成长、项目复盘和一些长期思考。
