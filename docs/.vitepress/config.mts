@@ -30,7 +30,7 @@ const vitePressConfig = defineConfig({
       { text: '首页', link: '/' },
       { text: '工程实践', link: '/engineering/', activeMatch: '/engineering/' },
       { text: 'AI 应用与学习', link: '/ai/', activeMatch: '/ai/' },
-      { text: '计算机基础', link: '/cs/', activeMatch: '/cs/' },
+      // { text: '计算机基础', link: '/cs/', activeMatch: '/cs/' },
       { text: '思考与随笔', link: '/thoughts/', activeMatch: '/thoughts/' },
       { text: '知识探索', link: '/exploration/', activeMatch: '/exploration/' },
       // 后续新增分类，按下面格式加一行就行：
