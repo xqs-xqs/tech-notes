@@ -53,7 +53,8 @@ const vitePressConfig = defineConfig({
           text: '算法',
           collapsed: false,
           items: [
-            { text: '主题总览', link: '/cs/algorithms/' }
+            { text: '主题总览', link: '/cs/algorithms/' },
+            { text: '动态规划基本模型', link: '/cs/algorithms/dynamic-programming' }
           ]
         },
         {
