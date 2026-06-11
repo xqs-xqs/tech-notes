@@ -51,6 +51,17 @@ const topics = [
       '注意力机制',
       '训练与推理原理'
     ]
+  },
+  {
+    icon: '⌨️',
+    title: 'AI Coding',
+    description: '记录 Claude Code、Codex 等 AI 编程工具的使用技巧、命令详解与实践感悟。',
+    href: '/ai/ai-coding/',
+    points: [
+      'Claude Code 使用技巧',
+      '命令与工作流经验',
+      'AI Coding 思考'
+    ]
   }
 ]
 </script>

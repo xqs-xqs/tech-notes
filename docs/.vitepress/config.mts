@@ -136,6 +136,13 @@ const vitePressConfig = defineConfig({
           items: [
             { text: '主题总览', link: '/ai/agent/' }
           ]
+        },
+        {
+          text: 'AI Coding',
+          collapsed: true,
+          items: [
+            { text: '主题总览', link: '/ai/ai-coding/' }
+          ]
         }
       ],
 
