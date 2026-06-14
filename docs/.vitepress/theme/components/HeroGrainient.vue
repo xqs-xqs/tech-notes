@@ -2,9 +2,11 @@
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
 import { useData } from 'vitepress'
 import { Renderer, Triangle, Program, Mesh } from 'ogl'
+import { useIsMobile } from '../composables/useIsMobile'
 
 const { frontmatter, isDark } = useData()
 const isHome = computed(() => frontmatter.value.layout === 'home')
+const isMobile = useIsMobile()
 const containerRef = ref(null)
 
 let renderer = null
@@ -173,47 +175,37 @@ function destroyOGL() {
   uniforms = null
 }
 
-onMounted(() => {
-  if (isHome.value && !isDark.value) {
+// Render only on the home page, in light mode, and on non-mobile viewports.
+function shouldRender() {
+  return isHome.value && !isDark.value && !isMobile.value
+}
+
+async function sync() {
+  if (shouldRender()) {
+    await nextTick()
+    if (renderer) return
     initOGL()
     animationFrameId = requestAnimationFrame(animate)
     window.addEventListener('resize', resize)
+  } else {
+    destroyOGL()
+    window.removeEventListener('resize', resize)
   }
-})
+}
+
+onMounted(sync)
 
 onUnmounted(() => {
   destroyOGL()
   window.removeEventListener('resize', resize)
 })
 
-watch(isHome, async (val) => {
-  if (val && !isDark.value) {
-    await nextTick()
-    initOGL()
-    animationFrameId = requestAnimationFrame(animate)
-    window.addEventListener('resize', resize)
-  } else {
-    destroyOGL()
-    window.removeEventListener('resize', resize)
-  }
-})
-
-watch(isDark, async (val) => {
-  if (isHome.value && !val) {
-    await nextTick()
-    initOGL()
-    animationFrameId = requestAnimationFrame(animate)
-    window.addEventListener('resize', resize)
-  } else {
-    destroyOGL()
-    window.removeEventListener('resize', resize)
-  }
-})
+watch([isHome, isDark, isMobile], sync)
 </script>
 
 <template>
   <div
-    v-if="isHome && !isDark"
+    v-if="isHome && !isDark && !isMobile"
     ref="containerRef"
     class="grainient-container"
     aria-hidden="true"

@@ -2,9 +2,11 @@
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
 import { useData } from 'vitepress'
 import * as THREE from 'three'
+import { useIsMobile } from '../composables/useIsMobile'
 
 const { frontmatter, isDark } = useData()
 const isHome = computed(() => frontmatter.value.layout === 'home')
+const isMobile = useIsMobile()
 const containerRef = ref(null)
 
 const BEAM_WIDTH = 3
@@ -258,47 +260,37 @@ function destroyThree() {
   scene = null; camera = null; dirLight = null; dirLight2 = null; shaderUniforms = null
 }
 
-onMounted(() => {
-  if (isHome.value && isDark.value) {
+// Render only on the home page, in dark mode, and on non-mobile viewports.
+function shouldRender() {
+  return isHome.value && isDark.value && !isMobile.value
+}
+
+async function sync() {
+  if (shouldRender()) {
+    await nextTick()
+    if (renderer) return
     initThree()
     animationFrameId = requestAnimationFrame(animate)
     window.addEventListener('resize', resize)
+  } else {
+    destroyThree()
+    window.removeEventListener('resize', resize)
   }
-})
+}
+
+onMounted(sync)
 
 onUnmounted(() => {
   destroyThree()
   window.removeEventListener('resize', resize)
 })
 
-watch(isHome, async (val) => {
-  if (val && isDark.value) {
-    await nextTick()
-    initThree()
-    animationFrameId = requestAnimationFrame(animate)
-    window.addEventListener('resize', resize)
-  } else {
-    destroyThree()
-    window.removeEventListener('resize', resize)
-  }
-})
-
-watch(isDark, async (val) => {
-  if (isHome.value && val) {
-    await nextTick()
-    initThree()
-    animationFrameId = requestAnimationFrame(animate)
-    window.addEventListener('resize', resize)
-  } else {
-    destroyThree()
-    window.removeEventListener('resize', resize)
-  }
-})
+watch([isHome, isDark, isMobile], sync)
 </script>
 
 <template>
   <div
-    v-if="isHome && isDark"
+    v-if="isHome && isDark && !isMobile"
     ref="containerRef"
     class="beams-container"
     aria-hidden="true"
