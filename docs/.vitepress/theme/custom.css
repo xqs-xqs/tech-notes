@@ -47,6 +47,14 @@
   border-radius: 0 2px 2px 0;
 }
 
+/* ══════════════════════════════════════════════════════
+   Home page custom theme — DESKTOP ONLY.
+   Everything below is scoped to ≥768px (VitePress' nav
+   breakpoint) so mobile falls back to the default VitePress
+   home styling instead of the floating pill nav / glass UI.
+   ══════════════════════════════════════════════════════ */
+@media (min-width: 768px) {
+
 /* ── Hero threads: ensure hero text stays above canvas ── */
 .VPHero {
   position: relative;
@@ -243,3 +251,5 @@ html:not(.dark):has(.VPHome) .VPFooter .copyright {
 html:not(.dark):has(.VPHome) .VPFooter .copyright a {
   color: rgba(255, 255, 255, 0.9) !important;
 }
+
+} /* end @media (min-width: 768px) — home page desktop theme */
