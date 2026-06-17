@@ -108,13 +108,10 @@ const vitePressConfig = defineConfig({
           ]
         },
         {
-          text: '附录：工具链',
+          text: '工具箱',
           collapsed: false,
           items: [
-            { text: '常用 Git 命令速查', 
-              link: '/engineering/appendix/git-commands' 
-            }
-            // { text: 'VS Code 写作环境配置', link: '/engineering/appendix/vscode-writing' }
+            { text: '主题总览', link: '/engineering/toolbox/' }
           ]
         }
       ],
