@@ -18,6 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # 拉取完整 git 历史，VitePress 才能正确获取每个页面的最后更新时间
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
