@@ -151,6 +151,10 @@ const vitePressConfig = defineConfig({
             {
               text: '无线网络中的对抗性防御综述',
               link: '/exploration/network-and-security/adversarial-defenses-in-wireless-networks'
+            },
+            {
+              text: '端到端加密聊天项目复盘与沉淀',
+              link: '/exploration/network-and-security/e2ee-chat-project-retrospective'
             }
           ]
         },
