@@ -138,7 +138,11 @@ const vitePressConfig = defineConfig({
           text: 'AI Coding',
           collapsed: true,
           items: [
-            { text: '主题总览', link: '/ai/ai-coding/' }
+            { text: '主题总览', link: '/ai/ai-coding/' },
+            {
+              text: 'AI 协作原则与实践方法论',
+              link: '/ai/ai-coding/ai-collaboration-principles'
+            }
           ]
         }
       ],
