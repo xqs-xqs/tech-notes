@@ -159,6 +159,10 @@ const vitePressConfig = defineConfig({
             {
               text: '端到端加密聊天项目复盘与沉淀',
               link: '/exploration/network-and-security/e2ee-chat-project-retrospective'
+            },
+            {
+              text: '网络安全入门三部曲',
+              link: '/exploration/network-and-security/network-security-trilogy'
             }
           ]
         },
